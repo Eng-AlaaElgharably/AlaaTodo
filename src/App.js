@@ -1,23 +1,22 @@
+import { useEffect, useState } from 'react';
 import logo from './logo.svg';
+import ao from './A&O.svg';
 import './App.css';
+import {Header, Footer} from './components/HeaderandFooter.js';
+import {Form} from './components/Form.js'
+import {Todolist} from "./components/Todolist.js"
 
 function App() {
+  const [alaaTodos, setTodos] = useState(JSON.parse(localStorage.getItem('alaaTodos')) || []);
+    useEffect(() => {
+        localStorage.setItem("alaaTodos", JSON.stringify(alaaTodos));
+      });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header logo={logo}/>
+      <Form alaaTodos={alaaTodos} setTodos={setTodos} />
+      <Todolist alaaTodos={alaaTodos} setTodos={setTodos} />
+      <Footer  logo={logo} ao={ao}/>
     </div>
   );
 }

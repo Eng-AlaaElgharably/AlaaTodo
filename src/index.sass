@@ -1,0 +1,79 @@
+// Alaa Framework
+// Author: Alaa Elgharably, Software Engineer (FullStack Developer)
+// CV:
+// Website: 
+// Version: 1.0.0 (beta)
+// Last edit: 22 / 8 / 2022
+
+// Import font from google fonts    
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,500;1,700&display=swap')
+
+// Basic modifications to the elements
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+html
+    scroll-behavior: smooth
+body
+    font-family: 'Saira', sans-serif
+a
+    text-decoration: none
+    color: #000
+ul li
+    list-style-type: none
+
+// Modifications of scrollbar
+::-webkit-scrollbar 
+    width: 10px
+::-webkit-scrollbar-track 
+    background: #eee
+::-webkit-scrollbar-thumb 
+    background: #888
+::-webkit-scrollbar-thumb:hover
+    background: #000
+
+// Basic modifications to the form elements
+input, textarea, button
+    height: 40px
+    width: 300px
+    border: 0
+    font-size: 16px
+    font-weight: 300
+    padding: 10px
+    &:focus
+        outline: 0
+        border: 0  
+label
+    padding: 10px
+button
+    cursor: pointer
+    background-color: #0f0
+    font-weight: bold
+
+// Grid System
+.container
+    overflow: hidden
+.row
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-gap: 10px
+    margin: 10px
+$list: (12, 9, 8, 6, 4, 3)
+@each $l in $list
+    .col-lg-#{$l}
+        grid-column: span $l 
+@media screen and (max-width: 768px)
+    @each $m in $list
+        .col-md-#{$m}
+            grid-column: span $m
+@media screen and (max-width: 512px)
+    @each $s in $list
+        .col-sm-#{$s}
+            grid-column: span $s
+
+// flex system
+.flex
+    display: flex
+    justify-content: center
+    align-items: center
