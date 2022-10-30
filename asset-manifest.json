@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AlaaTodo/static/css/main.704db4dc.css",
+    "main.js": "/AlaaTodo/static/js/main.119e55ab.js",
+    "static/media/logo.svg": "/AlaaTodo/static/media/logo.c34039ec9afc55c66285402a6abd4e34.svg",
+    "static/media/A&O.svg": "/AlaaTodo/static/media/A&O.2f99cc002d678bff8a14e8b9e0e1bbd4.svg",
+    "index.html": "/AlaaTodo/index.html",
+    "main.704db4dc.css.map": "/AlaaTodo/static/css/main.704db4dc.css.map",
+    "main.119e55ab.js.map": "/AlaaTodo/static/js/main.119e55ab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.704db4dc.css",
+    "static/js/main.119e55ab.js"
+  ]
+}
